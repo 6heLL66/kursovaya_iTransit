@@ -7,7 +7,7 @@ const userSchema = new Schema({
     collections: { type: Array }
 })
 
-const userModel = model("User", userSchema)
+const userModel = model("users", userSchema)
 
-export default userModel;
+module.exports = userModel
 

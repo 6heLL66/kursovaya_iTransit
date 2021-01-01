@@ -15,22 +15,20 @@ router.post(
     async (req, res) => {
     try {
         const errors = validationResult(req)
-
         if (!errors.isEmpty()) {
-            return res.sendStatus(400).json({
-                errors,
+            return res.status(400).json({
+                errors: errors.array(),
                 message: "Некорректные данные"
             })
         }
-
-        const sameUsername = UserModel.findOne({ username: req.body.username })
-        const sameEmail = UserModel.findOne({ email: req.body.email })
+        const sameUsername = await UserModel.findOne({ username: req.body.username })
+        const sameEmail = await UserModel.findOne({ email: req.body.email })
 
         if (sameUsername || sameEmail) {
-            return res.sendStatus(400).json({ message: "Пользователь с таким никнеймом или почтой уже существует."})
+            return res.status(400).json({ message: "Пользователь с таким никнеймом или почтой уже существует."})
         }
 
-        const hashedPass = await bcrypt.hash(req.body.password, 16)
+        const hashedPass = await bcrypt.hash(req.body.password, 8)
         const User = new UserModel({
             username: req.body.username,
             email: req.body.email,
@@ -40,9 +38,9 @@ router.post(
 
         await User.save()
 
-        res.sendStatus(200).json({ message: "Пользователь создан."})
+        res.status(200).json({ message: "Пользователь создан."})
     } catch (e) {
-        res.sendStatus(500).json({ message: "Что-то пошло не так ):"})
+        res.status(500).json({ message: "Что-то пошло не так ):"})
     }
 })
 
@@ -50,29 +48,49 @@ router.post(
     "/login",
     async (req, res) => {
         try {
-            const user = UserModel.findOne({ username: req.body.username, password: req.body.password })
+            const user = await UserModel.findOne({ username: req.body.username })
 
             if (!user) {
-                res.sendStatus(400).json({ message: "Такого пользователя не существует" })
+                return res.status(400).json({ message: "Такого пользователя не существует" })
             }
 
-            const isMatch = await bcrypt.compare(user.password, req.body.password)
+            const isMatch = await bcrypt.compare(req.body.password, user.password)
 
             if (!isMatch) {
-                res.sendStatus(400).json({ message: "Неверный пароль" })
+                return res.status(400).json({ message: "Неверный пароль" })
             }
 
             const token = jwt.sign(
-                { userId: user.id },
+                { userId: user._id },
                 "aisfhqiuwhfkjasf124iojlkq1124qsd456ysg",
                 { expiresIn: "30m" }
             )
 
-            res.json({ token, userId: user.id })
+            res.json({ token, userId: user._id })
         } catch(e) {
-            res.sendStatus(500).json({ message: "Что-то пошло не так ):"})
+            res.status(500).json({ message: "Что-то пошло не так ):"})
         }
     }
 )
 
-export default router
+router.post(
+    "/auth",
+    async (req, res) => {
+        try {
+            const decoded = jwt.verify(req.body.token,
+                "aisfhqiuwhfkjasf124iojlkq1124qsd456ysg",
+                (err, decoded) => {
+                    if (err) {
+                        res.status(100).json({ message: "Невалидный токен", data: false })
+                    }
+                    else {
+                        res.status(100).json({ message: "Успешная авторизация", data: true })
+                    }
+                })
+        } catch(e) {
+            res.status(500).json({ message: "Что-то пошло не так ):"})
+        }
+    }
+)
+
+module.exports = router
