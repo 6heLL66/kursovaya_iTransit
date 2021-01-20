@@ -9,7 +9,8 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": " cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\"",
-    "build":  "npm install --prefix client"
+    "client:build":  "npm run build --prefix client",
+    "client:install": "npm install --prefix client"
   },
   "keywords": [],
   "author": "",
