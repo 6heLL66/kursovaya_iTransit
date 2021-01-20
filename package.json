@@ -1,6 +1,6 @@
 {
   "name": "kursovaya",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Курсовой проект iTransition",
   "main": "server.js",
   "proxy": "http://localhost:5000",
