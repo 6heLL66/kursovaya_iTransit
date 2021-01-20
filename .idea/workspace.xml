@@ -2,23 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34dfad1d-17f6-43b8-9e31-d0ce85df3cc7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/AdminPanel/AdminPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/hooks/useRequest.hook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/AdminPage/AdminPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/AdminPage/ControlPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/AdminPage/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/AdminPage/UsersTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionPage/ChangeFieldsModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionPage/CollectionPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionPage/Info.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionPage/Item.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionPage/ItemCreateModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionPage/ItemsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionsPage/Collection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionsPage/CollectionsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionsPage/CollectionsPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionsPage/ControlPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionsPage/CreateCollectionModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/HomePage/BiggestCollections.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/HomePage/HomePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/HomePage/LastItems.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/ItemPage/Comment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/ItemPage/Comments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/ItemPage/Info.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/ItemPage/ItemFields.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/ItemPage/ItemPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Search/SearchPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/SignInPage/SignInPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/languages.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middlewares/admin.middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middlewares/auth.middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middlewares/block.midleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/collection.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/item.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/tag.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/5d02608ec1052c73cfb9c06c24cd114c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/d3efffba185d9ba2371fa255d98df88e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/collections.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/files.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/items.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/users.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/AdminPanel/AdminPage.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Home/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/hooks/useRequest.hook.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/useRequest.hook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/signIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/signIn/SignIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/signUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/signUp/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/shared/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/shared/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/signIn/SignIn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/signUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/SignUpPage/SignUpPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
@@ -40,6 +82,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -48,6 +91,62 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3000/api/users/deleteUser" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;smth&quot;: &quot;asd&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://httpbin.org/post" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;id&quot;: 999,&#10;  &quot;value&quot;: &quot;content&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.my-requets#1">
+    <configuration name="All in my-requets" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/my-requets.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="my-requets#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/my-requets.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="post-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.my-requets#1" />
+        <item itemvalue="HTTP Request.All in my-requets" />
+        <item itemvalue="HTTP Request.post-requests#1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -65,6 +164,32 @@
       <workItem from="1609107852737" duration="1620000" />
       <workItem from="1609429087666" duration="4901000" />
       <workItem from="1609509485375" duration="7175000" />
+      <workItem from="1609543166419" duration="7377000" />
+      <workItem from="1609591650904" duration="931000" />
+      <workItem from="1609601351358" duration="4132000" />
+      <workItem from="1609607861738" duration="20085000" />
+      <workItem from="1609677283662" duration="3443000" />
+      <workItem from="1609680975750" duration="2838000" />
+      <workItem from="1609710922927" duration="14602000" />
+      <workItem from="1609745245671" duration="27936000" />
+      <workItem from="1609782671331" duration="2690000" />
+      <workItem from="1609788492729" duration="5000" />
+      <workItem from="1609854777853" duration="30417000" />
+      <workItem from="1609919582493" duration="6125000" />
+      <workItem from="1609965165473" duration="3880000" />
+      <workItem from="1610117833765" duration="5008000" />
+      <workItem from="1610151653624" duration="5611000" />
+      <workItem from="1610207480150" duration="4238000" />
+      <workItem from="1610293106055" duration="8465000" />
+      <workItem from="1610335768176" duration="940000" />
+      <workItem from="1610372261140" duration="17778000" />
+      <workItem from="1610402619139" duration="8451000" />
+      <workItem from="1610464143277" duration="3240000" />
+      <workItem from="1610483134998" duration="10640000" />
+      <workItem from="1610720470463" duration="4367000" />
+      <workItem from="1610818376356" duration="2364000" />
+      <workItem from="1611104822927" duration="734000" />
+      <workItem from="1611152465968" duration="10828000" />
     </task>
     <servers />
   </component>

@@ -1,12 +1,16 @@
 import React, {useState} from "react"
 import {Button, Col, Container, Form, Nav, Row} from "react-bootstrap"
 import {useRequest} from "../hooks/useRequest.hook"
+import {useSelector} from "react-redux";
+const languages = require("../languages.json")
 
-export default function SignUp() {
+export default function SignUpPage() {
     const [email, setEmail] = useState("")
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const { loading, error, request, success } = useRequest()
+    const lang = useSelector(state => state.language)
+    const theme = useSelector(state => state.theme)
 
     async function sendData(e) {
         e.preventDefault()
@@ -17,7 +21,8 @@ export default function SignUp() {
                 {
                     email,
                     username,
-                    password
+                    password,
+                    role: "User"
                 },
                 {
                     "Content-Type": "application/json"
@@ -34,37 +39,35 @@ export default function SignUp() {
 
     }
     return (
-        <Container className="mt-3">
+        <Container className={"mt-4 py-5" + " bg-" + (theme === "dark" ? "semi-dark" : "white")
+        + " text-" + (theme === "dark" ? "white-50" : "dark")}>
             <Col lg={{ span: 6, offset: 3 }}>
                 <Form>
                     <Form.Group controlId="email">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label>{languages[lang].email}</Form.Label>
                         <Form.Control
                             type="email"
                             placeholder="Enter email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
                     </Form.Group>
 
                     <Form.Group controlId="username">
-                        <Form.Label>Username</Form.Label>
+                        <Form.Label>{languages[lang].username}</Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="Enter username"
+                            placeholder={languages[lang].enterName}
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                         />
                     </Form.Group>
 
                     <Form.Group controlId="password">
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label>{languages[lang].password}</Form.Label>
                         <Form.Control
                             type="password"
-                            placeholder="Password"
+                            placeholder={languages[lang].password}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
@@ -75,11 +78,11 @@ export default function SignUp() {
                     </Row>
 
                     <Button variant="primary" type="submit" onClick={sendData} disabled={loading}>
-                        Sign Up
+                        {languages[lang].signUp}
                     </Button>
 
                     <Nav>
-                        <Nav.Link href="/signIn" style={{ padding: 0, marginTop: "10px" }}>Sign In</Nav.Link>
+                        <Nav.Link href="/signIn" style={{ padding: 0, marginTop: "10px" }}>{languages[lang].signIn}</Nav.Link>
                     </Nav>
                 </Form>
             </Col>
