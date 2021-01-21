@@ -31,10 +31,11 @@ const PORT = process.env.PORT || 5000
 
 db.connect()
     .then(() => {
-        app.listen(PORT, () => console.log("PORT: 5000"))
+        app.listen(PORT, () => console.log("PORT: ${PORT}"))
     })
     .catch((err) => {
         console.log("Server Error", err)
+        process.exit(0)
     })
 
 
