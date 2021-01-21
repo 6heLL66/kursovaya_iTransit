@@ -11,7 +11,7 @@
     "dev": " cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\"",
     "client:build":  "npm run build --prefix client",
     "client:install": "npm install --prefix client",
-    "build": "npm run client:install"
+    "build": "npm run client:install && npm run client:build"
   },
   "keywords": [],
   "author": "",
