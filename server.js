@@ -31,7 +31,7 @@ const PORT = process.env.PORT || 5000
 
 db.connect()
     .then(() => {
-        app.listen(PORT, () => console.log("PORT: ${PORT}"))
+        app.listen(PORT, () => console.log(`PORT: ${PORT}`))
     })
     .catch((err) => {
         console.log("Server Error", err)
