@@ -14,9 +14,9 @@ function Collection({ collection }) {
         window.location = "/collection/" + collection._id
     }
     return (
-        <Col xl={4} md={6} xs={12}>
+        <Col className={"my-3"} xl={4} md={6} xs={12}>
             <Card
-                className={"my-3" + (theme === "dark" ? "text-white bg-dark" : "bg-light")}
+                className={(theme === "dark" ? "text-white-50 bg-dark" : "bg-light")}
                 style={{ width: '276px', margin: "auto" }}
             >
                 <Image cloudName="itransit" publicId={collection.img_id} format={collection.img_format}>

@@ -3,6 +3,7 @@ const isAuth = require("../middlewares/auth.middleware");
 const tagModel = require("../models/tag.model");
 const collectionModel = require("../models/collection.model");
 const { Router } = require("express")
+const textSearch = require('fuzzy-search');
 
 const router = Router()
 
@@ -126,19 +127,8 @@ router.post(
             let result = []
 
             for (let i = 0; i < items.length; i++) {
-                let str = items[i].name + " " + items[i].parentName
-                items[i].comments.map(e => {
-                    str += " " + e.message
-                })
-                items[i].fields.map(e => {
-                    str += " " + e.value + " " + e.name
-                })
-                const keys = str.split(" ")
-                let priority = 0
-                values.map(e => {
-                    if (keys.includes(e)) priority++
-                })
                 let itemTags = []
+                let priority = 0
                 for (let j = 0; j < items[i].tags.length; j++) {
                     let tag = await tagModel.findOne({ _id: items[i].tags[j] })
                     if (tag) itemTags.push(tag)
@@ -153,6 +143,9 @@ router.post(
                 }
             }
 
+            const searcher = new textSearch(items, ["name", "parentName", "fields.value", "fields.name", "comments.message"])
+            const textFind = searcher.search(values.join(" "))
+            result = [...result, ...textFind]
 
             res.status(200).json({ ok: true, items: result })
         } catch(e) {

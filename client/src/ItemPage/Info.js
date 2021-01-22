@@ -11,9 +11,10 @@ const languages = require("../languages.json")
 function Info({ info, loading2, edit }) {
     const role = useSelector(state => state.role)
     const userId = useSelector(state => state.userId)
+    const isAuthUser = useSelector(state => state.isAuthUser)
     const lang = useSelector(state => state.language)
     const theme = useSelector(state => state.theme)
-    const [isLiked, setIsLiked] = useState(false)
+    const [isLiked, setIsLiked] = useState(true)
     const [likesCount, setLikesCount] = useState(0)
     const [editMode, setEditMode] = useState(false)
     const [dropText, setDropText] = useState("Click or drop your file here")
@@ -23,7 +24,7 @@ function Info({ info, loading2, edit }) {
 
     useEffect(() => {
         setValues({ name: info.name, file: null })
-        if (info.likes) {
+        if (info.likes && isAuthUser) {
             setIsLiked(info.likes.includes(userId))
             setLikesCount(info.likes.length)
         }
@@ -37,7 +38,7 @@ function Info({ info, loading2, edit }) {
     }
 
     async function setLike() {
-        if (loading) return
+        if (loading || !isAuthUser) return
         setIsLiked(!isLiked)
         const data = await request (
             "/api/items/likeItem",
@@ -121,7 +122,7 @@ function Info({ info, loading2, edit }) {
                                             <Icon.HeartFill
                                                 style={{
                                                     fontSize: "30px",
-                                                    color: "#c41e1e",
+                                                    color: "#dd1c1c",
                                                     cursor: "pointer"
                                                 }}
                                                 onClick={setLike}
@@ -129,7 +130,7 @@ function Info({ info, loading2, edit }) {
                                             <Icon.Heart
                                                 style={{
                                                     fontSize: "30px",
-                                                    color: "#c41e1e",
+                                                    color: "#dd1c1c",
                                                     cursor: "pointer"
                                                 }}
                                                 onClick={setLike}

@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34dfad1d-17f6-43b8-9e31-d0ce85df3cc7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CollectionPage/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionPage/Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CollectionsPage/Collection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionsPage/Collection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ItemPage/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ItemPage/Info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/languages.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/languages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/item.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/item.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/items.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/items.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +37,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.19.11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -137,6 +146,8 @@
       <workItem from="1611222269290" duration="7039000" />
       <workItem from="1611259748494" duration="2351000" />
       <workItem from="1611265284969" duration="1333000" />
+      <workItem from="1611337721912" duration="7432000" />
+      <workItem from="1611345166479" duration="1059000" />
     </task>
     <servers />
   </component>

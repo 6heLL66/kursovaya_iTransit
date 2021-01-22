@@ -1,5 +1,6 @@
 const { Schema, model } = require("mongoose")
 
+
 const itemSchema = new Schema({
     parent: { type: String, require: true },
     parentName: { type: String, require: true },
@@ -16,4 +17,6 @@ const itemSchema = new Schema({
 const itemModel = model("items", itemSchema)
 
 module.exports = itemModel
+{
 
+}
