@@ -21,7 +21,6 @@ export default function SignInPage() {
     }, [])
 
     async function login(type, user) {
-        console.log("login", type, user)
         try {
             const data = await request(
                 "/api/auth/login",

@@ -143,7 +143,7 @@ function Info({ info, loadCollection, fields, id, edit }) {
                                         <h2 className={"fs-6"}>{info.name}</h2>
                             }
                             <p><strong>{languages[lang].collections.owner}</strong>: <a href={"/collections/" + info.ownerId}>{info.ownerName}</a></p>
-                            <p><strong>{languages[lang].theme}</strong>: {info.theme}</p>
+                            <p><strong>{languages[lang].theme}</strong>: {languages[lang][info.theme]}</p>
                         </Col>
                         <Col style={{
                             display: "flex",

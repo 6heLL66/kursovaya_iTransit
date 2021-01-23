@@ -17,6 +17,3 @@ const itemSchema = new Schema({
 const itemModel = model("items", itemSchema)
 
 module.exports = itemModel
-{
-
-}
