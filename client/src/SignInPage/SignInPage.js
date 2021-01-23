@@ -21,6 +21,7 @@ export default function SignInPage() {
     }, [])
 
     async function login(type, user) {
+        console.log("login", type, user)
         try {
             const data = await request(
                 "/api/auth/login",
@@ -40,7 +41,7 @@ export default function SignInPage() {
                 await auth(data.token, dispatch)
             }
         } catch (e) {
-            console.log(e)
+            console.log(e.message)
         }
     }
     return (

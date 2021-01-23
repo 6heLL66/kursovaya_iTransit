@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="34dfad1d-17f6-43b8-9e31-d0ce85df3cc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/SignInPage/SignInPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/SignInPage/SignInPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +140,8 @@
       <workItem from="1611265284969" duration="1333000" />
       <workItem from="1611337721912" duration="7432000" />
       <workItem from="1611345166479" duration="1576000" />
-      <workItem from="1611362597947" duration="508000" />
+      <workItem from="1611362597947" duration="641000" />
+      <workItem from="1611371285602" duration="94000" />
     </task>
     <servers />
   </component>
