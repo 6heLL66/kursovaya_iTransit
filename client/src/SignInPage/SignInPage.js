@@ -83,7 +83,7 @@ export default function SignInPage() {
                     <Row style={{ marginTop: "10px", marginLeft: 0 }}>
                         <GoogleLogin
                             clientId="808424836478-45hk3q9s4jbhlc9thn8sud56g7ff1u3m.apps.googleusercontent.com"
-                            redirectUri={"http://localhost:3000"}
+                            redirectUri={"https://itransitkurs.herokuapp.com/"}
                             onSuccess={(res) => login("google", res.profileObj)}
                             cookiePolicy={'single_host_origin'}
                         />
