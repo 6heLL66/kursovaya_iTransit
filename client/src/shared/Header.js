@@ -82,7 +82,7 @@ function Header({ isLogged }) {
                 text={text}
                 setText={setText}
                 lang={lang}
-                isLogged={{isLogged}}
+                isLogged={isLogged}
                 search={search}
             />
 
