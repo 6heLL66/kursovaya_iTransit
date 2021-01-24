@@ -7,7 +7,7 @@ import ReactLoading from "react-loading";
 import ItemsContainer from "./ItemsContainer";
 
 function CollectionPage() {
-    const [info, setInfo] = useState({})
+    const [info, setInfo] = useState(null)
 
     const [items, setItems] = useState(null)
     const [fields, setFields] = useState([])
@@ -92,7 +92,7 @@ function CollectionPage() {
     return (
         <Container fluid>
             {
-                loading
+                loading || !info
                 ?
                     <Row className="justify-content-md-center">
                         <ReactLoading type={"spin"} color={"#000000"} height={60} width={60} />
@@ -100,7 +100,7 @@ function CollectionPage() {
                 :
                     <Col>
                         <Info info={info} loadCollection={loadCollection} id={id} fields={fields} edit={edit} />
-                        <ItemsContainer items={items} size={2} />
+                        <ItemsContainer items={items} size={2} isFilter={true} />
                     </Col>
             }
             <span>{error || ""}</span>

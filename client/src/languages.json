@@ -69,7 +69,21 @@
     "commentsMessage": "Здесь еще нет комментариев, будь первым",
     "send": "Отправить",
     "likes": "лайки",
-    "comments2": "комменты"
+    "comments2": "комменты",
+    "filter": "Фильтр",
+    "filterType": "Тип фильтра",
+    "more": "Больше",
+    "less": "Меньше",
+    "moreThen": "Больше чем",
+    "lessThen": "Меньше чем",
+    "onlyOff": "Только нет",
+    "onlyOn": "Только да",
+    "addFilter": "Добавить фильтр",
+    "noSort": "Без сортировки",
+    "nameAZ": "Название от А до Я",
+    "nameZA": "Название от Я до А",
+    "lessToMore": "от меньшего к большему",
+    "moreToLess": "от большего в меньшему"
   },
   "en": {
     "header": {
@@ -141,6 +155,20 @@
     "commentsMessage": "There are no comments, be the first",
     "send": "Send",
     "likes": "likes",
-    "comments2": "comments"
+    "comments2": "comments",
+    "filter": "Filter",
+    "filterType": "Filter Type",
+    "more": "More",
+    "less": "Less",
+    "moreThen": "More Then",
+    "lessThen": "Less Then",
+    "onlyOff": "Only Off",
+    "onlyOn": "Only On",
+    "addFilter": "Add Filter",
+    "noSort": "No Sort",
+    "nameAZ": "Name from A to Z",
+    "nameZA": "Name from Z to A",
+    "lessToMore": "from less to more",
+    "moreToLess": "from more to less"
   }
 }

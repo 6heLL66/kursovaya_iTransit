@@ -233,7 +233,7 @@ router.post(
             items.forEach(async (el) => {
                 el.fields = req.body.fields.map((e, i) => {
                     if (e.new) {
-                        return { type: e.type, name: e.name, value: "" }
+                        return { type: e.type, name: e.name, value: e.type !== "checkbox" ? "" : false }
                     } else {
                         return { type: e.type, name: e.name, value: el.fields[i].value }
                     }

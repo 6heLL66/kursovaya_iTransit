@@ -3,6 +3,7 @@ import {Button, Col, Collapse, Dropdown, Form, Nav, Navbar, Row} from "react-boo
 import {useDispatch, useSelector} from "react-redux";
 import * as Icon from "react-bootstrap-icons"
 import {useRequest} from "../hooks/useRequest.hook";
+import {useGoogleLogout} from "react-google-login";
 let language = require('../languages.json')
 
 function Header({ isLogged }) {
@@ -13,7 +14,7 @@ function Header({ isLogged }) {
     const [text, setText] = useState("")
     function logout() {
         if (localStorage.getItem("type") === "google") {
-            window.open("https://mail.google.com/mail/u/0/?logout&hl=en", '_blank')
+            //window.open("https://mail.google.com/mail/u/0/?logout&hl=en", '_blank')
         }
         else if (localStorage.getItem("type") === "VK") {
             window.VK.Auth.logout((res) => {

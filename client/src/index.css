@@ -42,3 +42,12 @@ ul {
 .bg-semi-dark {
   background: #161515 !important;
 }
+
+.x {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.x:hover {
+  color: #d01717;
+}

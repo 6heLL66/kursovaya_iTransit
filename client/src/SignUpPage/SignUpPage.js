@@ -22,7 +22,9 @@ export default function SignUpPage() {
                     email,
                     username,
                     password,
-                    role: "User"
+                    role: "User",
+                    lang,
+                    theme
                 },
                 {
                     "Content-Type": "application/json"

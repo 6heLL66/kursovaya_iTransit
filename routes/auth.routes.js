@@ -38,8 +38,8 @@ router.post(
             role: req.body.role,
             status: "not blocked",
             type: "common",
-            language: "rus",
-            theme: "light",
+            language: req.body.lang,
+            theme: req.body.theme,
             collections: []
         })
 
@@ -94,8 +94,8 @@ router.post(
                     password: "google_auth",
                     type: "google",
                     role: "User",
-                    language: "rus",
-                    theme: "light",
+                    language: req.body.lang,
+                    theme: req.body.theme,
                     status: "not blocked",
                     collections: []
                 })
@@ -128,8 +128,8 @@ router.post(
                     password: "vk_auth",
                     type: "vk",
                     role: "User",
-                    language: "rus",
-                    theme: "light",
+                    language: req.body.lang,
+                    theme: req.body.theme,
                     status: "not blocked",
                     collections: []
                 })

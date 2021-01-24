@@ -27,7 +27,9 @@ export default function SignInPage() {
                 "POST",
                 {
                     type,
-                    user
+                    user,
+                    lang,
+                    theme
                 },
                 {
                     "Content-Type": "application/json"

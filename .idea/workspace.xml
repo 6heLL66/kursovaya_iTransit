@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34dfad1d-17f6-43b8-9e31-d0ce85df3cc7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionPage/FilterView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/CollectionPage/SortView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CollectionPage/CollectionPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionPage/CollectionPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CollectionPage/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionPage/Info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CollectionPage/ItemsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionPage/ItemsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/SignInPage/SignInPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/SignInPage/SignInPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/SignUpPage/SignUpPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/SignUpPage/SignUpPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/languages.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/languages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/shared/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/collections.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/collections.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +154,9 @@
       <workItem from="1611345166479" duration="1576000" />
       <workItem from="1611362597947" duration="641000" />
       <workItem from="1611371285602" duration="1077000" />
+      <workItem from="1611409225781" duration="15477000" />
+      <workItem from="1611450315666" duration="740000" />
+      <workItem from="1611520120471" duration="2205000" />
     </task>
     <servers />
   </component>
