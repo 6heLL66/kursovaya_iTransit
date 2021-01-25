@@ -145,7 +145,7 @@ router.post(
 
             const searcher = new textSearch(items, ["name", "parentName", "fields.value", "fields.name", "comments.message"])
             const textFind = searcher.search(values.join(" "))
-            result = [...result, ...textFind]
+            if (values.join(" ") !== "") result = [...result, ...textFind]
 
             res.status(200).json({ ok: true, items: result })
         } catch(e) {

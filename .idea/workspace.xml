@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="34dfad1d-17f6-43b8-9e31-d0ce85df3cc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CollectionPage/FilterView.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionPage/FilterView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/items.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/items.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +144,7 @@
       <workItem from="1611371285602" duration="1077000" />
       <workItem from="1611409225781" duration="15477000" />
       <workItem from="1611450315666" duration="740000" />
-      <workItem from="1611520120471" duration="4427000" />
+      <workItem from="1611520120471" duration="5468000" />
     </task>
     <servers />
   </component>
