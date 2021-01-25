@@ -10,6 +10,7 @@ function FilterView({ allItems, setShowedItems }) {
     const [value, setValue] = useState(null)
     const [filters, setFilters] = useState([])
     const lang = useSelector(state => state.language)
+    const theme = useSelector(state => state.theme)
 
     useEffect(() => {
         setField({ type: allItems[0].fields[0].type, name: allItems[0].fields[0].name, index: 0 })
@@ -165,7 +166,7 @@ function FilterView({ allItems, setShowedItems }) {
                             filters && filters.map((e, i) => {
                                 return (
                                     <Row
-                                        className={"p-2 my-1 justify-content-between" + (theme === dark ? "bg-semi-dark" : "bg-light")}
+                                        className={"p-2 w-75 my-1 justify-content-between " + (theme === "dark" ? "bg-dark" : "bg-light")}
                                         key={i}
                                     >
                                         <span
