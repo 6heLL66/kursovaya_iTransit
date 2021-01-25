@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import UsersTable from "./UsersTable"
 import {useRequest} from "../hooks/useRequest.hook"
 import {Container} from "react-bootstrap";
@@ -8,14 +8,14 @@ function AdminPage() {
     const { loading, request, error } = useRequest()
     const [userData, setUserData] = useState([])
 
-    async function loadUsers() {
+    const loadUsers = useCallback(async () => {
         const data = await request("/api/users/getUsers")
         if (data) setUserData(data.data)
-    }
+    }, [request])
 
     useEffect(() => {
         loadUsers().then()
-    }, [])
+    }, [loadUsers])
 
 
     return (

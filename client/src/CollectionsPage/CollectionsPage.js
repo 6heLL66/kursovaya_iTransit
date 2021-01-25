@@ -1,19 +1,17 @@
-import React, {useEffect, useState} from "react"
+import React, {useCallback, useEffect, useState} from "react"
 import {useRequest} from "../hooks/useRequest.hook";
 import ControlPanel from "./ControlPanel";
 import {Container, Row} from "react-bootstrap";
 import {useParams} from "react-router";
 import CollectionsContainer from "./CollectionsContainer";
 import ReactLoading from "react-loading";
-import {useSelector} from "react-redux";
 
 function CollectionsPage() {
     const ownerId = useParams().ownerId
-    const lang = useSelector(state => state.language)
     const [collections, setCollections] = useState([])
     const [owner, setOwner] = useState({})
     const { request, loading, error } = useRequest()
-    async function loadUser() {
+    const loadUser = useCallback(async () => {
         const data = await request(
             "/api/collections/getCollections",
             "POST",
@@ -26,11 +24,11 @@ function CollectionsPage() {
             setCollections(data.collections)
             setOwner(data.owner)
         }
-    }
+    }, [ownerId, request])
 
     useEffect(() => {
         if (ownerId) loadUser().then()
-    }, [ownerId])
+    }, [ownerId, loadUser])
 
     return (
         <Container>

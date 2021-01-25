@@ -3,7 +3,6 @@ import {Button, Col, Collapse, Dropdown, Form, Nav, Navbar, Row} from "react-boo
 import {useDispatch, useSelector} from "react-redux";
 import * as Icon from "react-bootstrap-icons"
 import {useRequest} from "../hooks/useRequest.hook";
-import {useGoogleLogout} from "react-google-login";
 let language = require('../languages.json')
 
 function Header({ isLogged }) {
@@ -44,7 +43,7 @@ function Header({ isLogged }) {
                     :
                     [
                         <Nav.Link href="/search/" key={2}>{language[lang].header.search}</Nav.Link>,
-                        <Nav.Link href="/signUp" key={0}>{language[lang].header.signup}</Nav.Link>,
+                        <Nav.Link className={"d-sm-inline d-none"} href="/signUp" key={0}>{language[lang].header.signup}</Nav.Link>,
                         <Nav.Link href="/signIn" key={1}>{language[lang].header.signin}</Nav.Link>
                     ]
                 }
@@ -81,6 +80,7 @@ function Header({ isLogged }) {
             <BurgerMenu
                 logout={logout}
                 text={text}
+                theme={theme}
                 setText={setText}
                 lang={lang}
                 isLogged={isLogged}
@@ -165,14 +165,17 @@ function ThemeChange() {
     )
 }
 
-function BurgerMenu({ isLogged, logout, lang, text, search, setText }) {
+function BurgerMenu({ isLogged, logout, lang, theme,  text, search, setText }) {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
         <Col className={"d-flex d-md-none justify-content-end"}>
             <Row className={"w-100 justify-content-end"}>
                     <Row className={"w-100 justify-content-end pr-4"}>
-                        <Icon.ThreeDots  style={{ fontSize: "28px" }} onClick={() => setIsOpen(!isOpen)}/>
+                        <Icon.ThreeDots
+                            style={{ fontSize: "28px", color: theme === "dark" ? "white" : "black" }}
+                            onClick={() => setIsOpen(!isOpen)}
+                        />
                     </Row>
 
                     <Collapse in={isOpen}>

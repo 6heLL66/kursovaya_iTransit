@@ -29,6 +29,7 @@ function SortView({ showedItems, setShowedItems, allItems }) {
                 if (sort.value === "ml") {
                     return a.name <= b.name ? -1 : 1
                 } else if (sort.value === "lm") return a.name <= b.name ? 1 : -1
+                return 1
             })
         } else {
             if (sort.type === "number") {
@@ -38,6 +39,7 @@ function SortView({ showedItems, setShowedItems, allItems }) {
                     } else if (sort.value === "lm") {
                         return Number(a.fields[sort.index].value) <= Number(b.fields[sort.index].value) ? -1 : 1
                     }
+                    return 1
                 })
             } else if (sort.type === "date") {
                 items = items.sort((a, b) => {
@@ -48,11 +50,12 @@ function SortView({ showedItems, setShowedItems, allItems }) {
                         return (new Date(a.fields[sort.index].value)).getTime()
                                 <= (new Date(b.fields[sort.index].value)).getTime() ? -1 : 1
                     }
+                    return 1
                 })
             }
         }
         setShowedItems([...items])
-    }, [sort])
+    }, [sort, allItems])
 
     return (
         <Row className={"justify-content-end"}>

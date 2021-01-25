@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {useCallback, useEffect, useState} from "react"
 import CollectionsContainer from "../CollectionsPage/CollectionsContainer";
 import {useRequest} from "../hooks/useRequest.hook";
 import {Container, Row} from "react-bootstrap";
@@ -8,7 +8,7 @@ function BiggestCollections() {
     const [collections, setCollections] = useState(null)
     const { request, loading } = useRequest()
 
-    async function loadCollections() {
+    const loadCollections = useCallback(async () => {
         const data = await request (
             "/api/collections/getAllCollections",
             "GET"
@@ -19,11 +19,11 @@ function BiggestCollections() {
             }).slice(0, data.collections.length >= 3 ? 3 : data.collections.length)
             setCollections(biggestCollections)
         }
-    }
+    }, [request])
 
     useEffect(() => {
         loadCollections().then()
-    }, [])
+    }, [loadCollections])
     return (
         <Container>
             {

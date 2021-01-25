@@ -39,10 +39,11 @@ function FilterView({ allItems, setShowedItems }) {
                         ? item.fields[filter.index].value === true
                         : item.fields[filter.index].value === false
                 }
+                return true
             })
         })
         setShowedItems([...items])
-    }, [filters])
+    }, [filters, allItems, setShowedItems])
 
     function addFilter () {
         if (value === null && field.type !== "checkbox") return
@@ -103,6 +104,7 @@ function FilterView({ allItems, setShowedItems }) {
                                                 value={e.type + " " + e.name + " " + String(i)}
                                             >{e.name}</option>
                                         }
+                                        return null
                                     })
                                 }
                             </Form.Control>
@@ -166,7 +168,7 @@ function FilterView({ allItems, setShowedItems }) {
                             filters && filters.map((e, i) => {
                                 return (
                                     <Row
-                                        className={"p-2 w-75 my-1 justify-content-between " + (theme === "dark" ? "bg-dark" : "bg-light")}
+                                        className={"p-2 w-md-75 my-1 justify-content-between " + (theme === "dark" ? "bg-dark" : "bg-light")}
                                         key={i}
                                     >
                                         <span

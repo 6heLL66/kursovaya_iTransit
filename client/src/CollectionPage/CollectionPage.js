@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {useCallback, useEffect, useState} from "react"
 import {useParams} from "react-router"
 import Info from "./Info";
 import {Col, Container, Row} from "react-bootstrap";
@@ -14,7 +14,7 @@ function CollectionPage() {
     const id = useParams().id
     const { loading, error, request } = useRequest()
 
-    async function loadCollection() {
+    const loadCollection = useCallback(async () => {
         const data = await request(
             "/api/collections/getCollection",
             "POST",
@@ -52,7 +52,7 @@ function CollectionPage() {
             }
         }
 
-    }
+    },[id, request])
 
     async function edit(fields) {
         if (fields.file) {
@@ -88,7 +88,7 @@ function CollectionPage() {
 
     useEffect(() => {
         loadCollection().then()
-    }, [])
+    }, [loadCollection])
     return (
         <Container fluid>
             {

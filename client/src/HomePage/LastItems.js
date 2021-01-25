@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {useCallback, useEffect, useState} from "react"
 import ItemsContainer from "../CollectionPage/ItemsContainer";
 import {useRequest} from "../hooks/useRequest.hook";
 import ReactLoading from "react-loading";
@@ -8,7 +8,7 @@ function LastItems() {
     const [items, setItems] = useState(null)
     const { request, loading } = useRequest()
 
-    async function loadItems() {
+    const loadItems = useCallback(async () => {
         const data = await request(
             "/api/collections/getAllItems",
             "GET"
@@ -16,11 +16,11 @@ function LastItems() {
         if (data && data.ok) {
             setItems(data.items.slice(data.items.length - 7 > 0 && data.items.length - 7))
         }
-    }
+    }, [request])
 
     useEffect(() => {
         loadItems().then()
-    }, [])
+    }, [loadItems])
 
     return (
         <Container>

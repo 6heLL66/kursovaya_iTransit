@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {useCallback, useEffect, useState} from "react"
 import {useSelector} from "react-redux";
 import {useRequest} from "../hooks/useRequest.hook";
 import {Container, Row, Form, Col, Button} from "react-bootstrap";
@@ -13,13 +13,7 @@ function Comments({ itemID }) {
     const [message, setMessage] = useState("")
     const { request } = useRequest()
 
-    useEffect(() => {
-        if (itemID) loadComments(true).then()
-    }, [itemID])
-
-
-
-    async function loadComments(bool) {
+    const loadComments = useCallback(async (bool) => {
         const data = await request(
             "/api/items/getItem",
             "POST",
@@ -38,7 +32,11 @@ function Comments({ itemID }) {
             }
             setComments(data.item.comments)
         }
-    }
+    }, [request, itemID])
+
+    useEffect(() => {
+        if (itemID) loadComments(true).then()
+    }, [itemID, loadComments])
 
     async function send() {
         const data = await request(
