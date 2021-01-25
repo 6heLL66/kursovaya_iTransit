@@ -49,8 +49,7 @@ function FilterView({ allItems, setShowedItems }) {
         if (value === null && field.type !== "checkbox") return
         let add = false
         setFilters(filters.map(e => {
-            if (e.name !== field.name) return e
-            else {
+            if (e.name === field.name && e.filterType === filterType) {
                 add = true
                 return {
                     type: field.type,
@@ -59,7 +58,7 @@ function FilterView({ allItems, setShowedItems }) {
                     value: value,
                     index: field.index
                 }
-            }
+            } else return e
         }))
         if (!add) {
             setFilters([...filters, {
