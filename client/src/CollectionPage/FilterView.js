@@ -164,7 +164,10 @@ function FilterView({ allItems, setShowedItems }) {
                         {
                             filters && filters.map((e, i) => {
                                 return (
-                                    <Row className={"p-2 my-1 bg-light justify-content-between"} key={i}>
+                                    <Row
+                                        className={"p-2 my-1 justify-content-between" + (theme === dark ? "bg-semi-dark" : "bg-light")}
+                                        key={i}
+                                    >
                                         <span
                                         >{
                                             e.type !== "checkbox"
