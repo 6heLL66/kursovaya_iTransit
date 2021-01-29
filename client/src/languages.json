@@ -83,7 +83,10 @@
     "nameAZ": "Название от А до Я",
     "nameZA": "Название от Я до А",
     "lessToMore": "от меньшего к большему",
-    "moreToLess": "от большего в меньшему"
+    "moreToLess": "от большего в меньшему",
+    "anime": "Аниме",
+    "films": "Фильмы",
+    "pictures": "Картинки"
   },
   "en": {
     "header": {
@@ -169,6 +172,9 @@
     "nameAZ": "Name from A to Z",
     "nameZA": "Name from Z to A",
     "lessToMore": "from less to more",
-    "moreToLess": "from more to less"
+    "moreToLess": "from more to less",
+    "anime": "Anime",
+    "films": "Films",
+    "pictures": "Pictures"
   }
 }

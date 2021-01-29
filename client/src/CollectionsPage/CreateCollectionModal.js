@@ -80,6 +80,9 @@ function CreateCollectionModal({ show, hide, create, loading, error }) {
                             <option value={"Alcohol"}>{languages[lang].alcohol}</option>
                             <option value={"Books"}>{languages[lang].books}</option>
                             <option value={"Coins"}>{languages[lang].coins}</option>
+                            <option value={"Anime"}>{languages[lang].anime}</option>
+                            <option value={"Films"}>{languages[lang].films}</option>
+                            <option value={"Pictures"}>{languages[lang].pictures}</option>
                         </Form.Control>
                     </Form.Group>
 

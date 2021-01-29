@@ -26,6 +26,7 @@ function FilterView({ allItems, setShowedItems }) {
         let items = [...allItems]
         filters.forEach(filter => {
             items = items.filter(item => {
+                console.log(item)
                 if (filter.type === "number") {
                     return filter.filterType === "less"
                         ? Number(item.fields[filter.index].value) < filter.value
@@ -49,7 +50,8 @@ function FilterView({ allItems, setShowedItems }) {
         if (value === null && field.type !== "checkbox") return
         let add = false
         setFilters(filters.map(e => {
-            if (e.name === field.name && e.filterType === filterType) {
+            if (e.name === field.name
+                && (e.filterType === filterType || e.filterType === "true" || e.filterType === "false")) {
                 add = true
                 return {
                     type: field.type,

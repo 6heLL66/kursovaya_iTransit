@@ -5,9 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/CollectionPage/FilterView.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionPage/FilterView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CollectionPage/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionPage/Info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ItemPage/Comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ItemPage/Comments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ItemPage/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ItemPage/Info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CollectionPage/ItemCreateModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionPage/ItemCreateModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CollectionsPage/CreateCollectionModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionsPage/CreateCollectionModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/languages.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/languages.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +151,7 @@
       <workItem from="1611520120471" duration="5468000" />
       <workItem from="1611585995437" duration="3778000" />
       <workItem from="1611915343312" duration="238000" />
-      <workItem from="1611931731431" duration="1477000" />
+      <workItem from="1611931731431" duration="2655000" />
     </task>
     <servers />
   </component>

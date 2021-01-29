@@ -52,10 +52,10 @@ function ItemCreateModal({ create, loading, error, show, hide, fields }) {
                 <Form.Group>
                     <Form.Text>{languages[lang].advancedFields}</Form.Text>
                     {
-                        fields.map((e, i) => {
-                            if (e.type === "text") {
+                        fields.map((field, i) => {
+                            if (field.type === "text") {
                                 return [
-                                    <Form.Label key={i}>{e.name}</Form.Label>,
+                                    <Form.Label key={i}>{field.name}</Form.Label>,
                                     <Form.Control
                                         key={i + 1}
                                         as="textarea"
@@ -66,12 +66,12 @@ function ItemCreateModal({ create, loading, error, show, hide, fields }) {
                                 ]
                             } else {
                                 return [
-                                    <Form.Label key={i}>{e.name}</Form.Label>,
+                                    <Form.Label key={i}>{field.name}</Form.Label>,
                                     <Form.Control
                                         key={i + 1}
-                                        type={e.type}
+                                        type={field.type}
                                         onChange={(e) => {
-                                            item.fields[i].value = e.type !== "checkbox"
+                                            item.fields[i].value = field.type !== "checkbox"
                                                 ? e.target.value :
                                                 e.target.checked
                                         }}
