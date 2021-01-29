@@ -32,7 +32,7 @@ function ItemsContainer({ items, size, isFilter }) {
                 <h1>{languages[lang].items}</h1>
             </Row>
             {
-                allItems && isFilter && allItems[0].fields.length > 0 ?
+                allItems && allItems.length > 0 && isFilter && allItems[0].fields.length > 0 ?
                     <Row className={"w-100 justify-content-between mx-auto mb-3"}>
                         <Col xs={12} md={9}>
                             <FilterView allItems={allItems} setShowedItems={setShowedItems} />
