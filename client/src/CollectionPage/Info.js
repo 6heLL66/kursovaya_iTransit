@@ -117,7 +117,7 @@ function Info({ info, loadCollection, fields, id, edit }) {
     return (
         <Container className={"mt-4 py-3 bg-" + (theme === "dark" ? "semi-dark" : "white")
         + " text-" + (theme === "dark" ? "white-50" : "dark")}>
-            <Row >
+            <Row>
                 <Col xl={4} lg={5} md={6} xs={12} className={"text-center px-lg-2 px-0 text-lg-left"}>
                     {
                         editMode ?
@@ -133,8 +133,8 @@ function Info({ info, loadCollection, fields, id, edit }) {
                             </Image>
                     }
                 </Col>
-                <Col className={"text-center text-md-left px-lg-2 px-0 mr-3 mr-lg-0"}>
-                    <Row>
+                <Col xl={8} lg={7} md={6} xs={12} className={"text-center text-md-left px-2"}>
+                    <Row className={"justify-content-center"}>
                         <Col lg={7} md={7} xs={12}>
                             {
                                 editMode ?

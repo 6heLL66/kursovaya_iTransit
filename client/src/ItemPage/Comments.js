@@ -60,7 +60,7 @@ function Comments({ itemID }) {
         <Container className={"mt-4 px-3 py-3 bg-" + (theme === "dark" ? "semi-dark" : "white")
         + " text-" + (theme === "dark" ? "white-50" : "dark")}>
             <Row className={"w-100 justify-content-center"}>
-                <h1>{languages[lang].comments}: </h1>
+                <h1>{languages[lang].comments} </h1>
             </Row>
             {
                 comments.length <= 0 ?
@@ -83,7 +83,7 @@ function Comments({ itemID }) {
                                     onChange={(e) => setMessage(e.target.value)}
                                 />
                             </Col>
-                            <Col xs={1} className={"justify-content-center mt-3"}>
+                            <Col xs={3} md={1} className={"justify-content-center mt-3"}>
                                 <Button variant={"primary"} className={"my-auto"} onClick={send}>{languages[lang].send}</Button>
                             </Col>
                         </Row>

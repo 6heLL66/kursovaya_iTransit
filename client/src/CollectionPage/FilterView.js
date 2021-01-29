@@ -81,8 +81,8 @@ function FilterView({ allItems, setShowedItems }) {
     return (
         <Row>
             <Col xs={12}>
-                <Row>
-                    <Col xs={6} md={2}>
+                <Row className={"justify-content-between"}>
+                    <Col xs={6} md={2} className={"px-4"}>
                         <Row>
                             <Form.Text>{language[lang].filter}</Form.Text>
                             <Form.Control
@@ -109,7 +109,7 @@ function FilterView({ allItems, setShowedItems }) {
                             </Form.Control>
                         </Row>
                     </Col>
-                    <Col className={"mx-md-2"} xs={6} md={3}>
+                    <Col className={"mx-md-2 px-4"} xs={6} md={3}>
                         <Row>
                             <Form.Text>{language[lang].filterType}</Form.Text>
                             <Form.Control as={"select"} onChange={(e) => setFilterType(e.target.value)}>
@@ -146,7 +146,7 @@ function FilterView({ allItems, setShowedItems }) {
                     </Col>
                     {
                         field.type !== "checkbox" ?
-                            <Col xs={6} md={3}>
+                            <Col xs={6} md={3} className={"px-4"}>
                                 <Row>
                                     <Form.Text>{ filterType === "more" ? language[lang].more : language[lang].less}</Form.Text>
                                     <Form.Control type={field.type} onChange={e => setValue(e.target.value)} />
@@ -155,7 +155,7 @@ function FilterView({ allItems, setShowedItems }) {
                             </Col> :
                             []
                     }
-                    <Col xs={6} md={3} className={"d-flex align-items-end px-3"}>
+                    <Col className={"d-flex align-items-end px-3 justify-content-center mt-2 mt-md-0"}>
                         <Button onClick={addFilter} variant={"outline-primary"}>{language[lang].addFilter}</Button>
                     </Col>
                 </Row>

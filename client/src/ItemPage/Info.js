@@ -105,7 +105,7 @@ function Info({ info, loading2, edit }) {
                             </Image>
                     }
                 </Col>
-                <Col className={"text-center text-md-left px-lg-2 px-0 mr-3 mr-lg-0"}>
+                <Col xl={8} lg={7} md={6} xs={12} className={"text-center text-md-left px-2"}>
                     <Row>
                         <Col lg={7} md={7} xs={12}>
                             {
