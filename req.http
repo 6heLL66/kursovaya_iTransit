@@ -1,6 +1,0 @@
-POST http://localhost:5000/api/collections/getCSV
-Content-Type: application/json
-
-{"id": "600a06dff837e400156219da"}
-
-###
