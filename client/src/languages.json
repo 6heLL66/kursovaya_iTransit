@@ -86,7 +86,8 @@
     "moreToLess": "от большего в меньшему",
     "anime": "Аниме",
     "films": "Фильмы",
-    "pictures": "Картинки"
+    "pictures": "Картинки",
+    "exportCSV": "Экспорт CSV"
   },
   "en": {
     "header": {
@@ -175,6 +176,7 @@
     "moreToLess": "from more to less",
     "anime": "Anime",
     "films": "Films",
-    "pictures": "Pictures"
+    "pictures": "Pictures",
+    "exportCSV": "Export CSV"
   }
 }

@@ -3,3 +3,4 @@ node_modules
 /client/build
 .idea
 .github
+/tempCSV

@@ -45,6 +45,10 @@ function Info({ info, loadCollection, fields, id, edit }) {
         }
     }
 
+    async function downloadCSV() {
+        return window.open("https://itransitkurs.herokuapp.com/api/collections/getCSV?id=" + info.id)
+    }
+
     async function createItem(item, file) {
         const loadFile = await request(
             "/api/files/fileUpload",
@@ -192,6 +196,13 @@ function Info({ info, loadCollection, fields, id, edit }) {
                                                 variant={"outline-danger mb-2 mt-lg-3"}
                                                 onClick={deleteCollection}
                                             >{languages[lang].delete}
+                                            </Button>,
+                                            <Button
+                                                variant={"outline-primary mb-2 mb-lg-3"}
+                                                key={5}
+                                                onClick={downloadCSV}
+                                                disabled={loading}
+                                            >{languages[lang].exportCSV}
                                             </Button>
                                         ] : []
                             }

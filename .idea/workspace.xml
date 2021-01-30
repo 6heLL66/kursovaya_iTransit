@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34dfad1d-17f6-43b8-9e31-d0ce85df3cc7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/req.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CollectionPage/FilterView.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionPage/FilterView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CollectionPage/ItemCreateModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionPage/ItemCreateModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CollectionsPage/CreateCollectionModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionsPage/CreateCollectionModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CollectionPage/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CollectionPage/Info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/SignInPage/SignInPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/SignInPage/SignInPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/SignUpPage/SignUpPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/SignUpPage/SignUpPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/languages.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/languages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/collections.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/collections.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +46,102 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/api/collections/getCSV" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;id&quot;: &quot;600a06dff837e400156219da&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/api/collections/getCSV" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;{'id'':'600a06dff837e400156219da'}&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/api/collections/getCSV" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="&quot;{'id':'600a06dff837e400156219da'}&quot;" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/api/collections/getCSV" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="&quot;{&quot;id&quot;:&quot;600a06dff837e400156219da&quot;}&quot;" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:80/api/item" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="&quot;{&quot;id&quot;:&quot;600a06dff837e400156219da&quot;}&quot;" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:80/api/item" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;id&quot;: &quot;600a06dff837e400156219da&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="POST" />
           <option name="urlBase" value="http://localhost:3000/api/users/deleteUser" />
@@ -80,15 +181,26 @@
     <configuration name="All in my-requets" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/my-requets.http">
       <method v="2" />
     </configuration>
-    <configuration name="my-requets#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/my-requets.http" runType="Run single request">
+    <configuration name="All in req" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/req.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="http-requests-log#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="my-requets#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" path="$PROJECT_DIR$/my-requets.http" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="post-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="req#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/req.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.my-requets#1" />
+        <item itemvalue="HTTP Request.req#1" />
+        <item itemvalue="HTTP Request.http-requests-log#1" />
+        <item itemvalue="HTTP Request.All in req" />
         <item itemvalue="HTTP Request.All in my-requets" />
         <item itemvalue="HTTP Request.post-requests#1" />
       </list>
@@ -151,7 +263,8 @@
       <workItem from="1611520120471" duration="5468000" />
       <workItem from="1611585995437" duration="3778000" />
       <workItem from="1611915343312" duration="238000" />
-      <workItem from="1611931731431" duration="2655000" />
+      <workItem from="1611931731431" duration="3936000" />
+      <workItem from="1612021411269" duration="5646000" />
     </task>
     <servers />
   </component>

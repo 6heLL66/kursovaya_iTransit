@@ -12,7 +12,7 @@ export default function SignUpPage() {
     const lang = useSelector(state => state.language)
     const theme = useSelector(state => state.theme)
 
-    async function sendData(e) {
+    async function sendData(e, lang, theme) {
         e.preventDefault()
         try {
             await request(
@@ -79,7 +79,12 @@ export default function SignUpPage() {
                         <span>{error || success}</span>
                     </Row>
 
-                    <Button variant="primary" type="submit" onClick={sendData} disabled={loading}>
+                    <Button
+                        variant="primary"
+                        type="submit"
+                        onClick={(e) => sendData(e, lang, theme)}
+                        disabled={loading}
+                    >
                         {languages[lang].signUp}
                     </Button>
 

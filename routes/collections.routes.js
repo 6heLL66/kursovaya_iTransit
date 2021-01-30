@@ -3,6 +3,8 @@ const isAuth = require("../middlewares/auth.middleware")
 const collectionModel = require("../models/collection.model")
 const itemModel = require("../models/item.model")
 const tagModel = require("../models/tag.model")
+const ObjectsToCsv = require('objects-to-csv')
+const fs = require("fs");
 const {Types} = require("mongoose")
 const { check, validationResult } = require("express-validator")
 const { Router } = require("express")
@@ -290,6 +292,35 @@ router.post(
 
             res.status(200).json({ message: "Удаление прошло успешно", ok: true })
         } catch(e) {
+            res.status(500).json({ message: "Что-то пошло не так", error: e.message })
+        }
+    }
+)
+
+router.get(
+    "/getCSV",
+    async (req, res) => {
+        try {
+            console.log(req.query.id)
+            const items = await itemModel.find({ parent: req.query.id })
+
+            const list = []
+            Array.from(items).forEach((item) => {
+                list.push({...item.fields})
+            })
+
+            const csv = new ObjectsToCsv(list)
+
+            await csv.toDisk('./tempCSV/temp.csv', { append: true })
+
+            const path = "./tempCSV/"
+            const name = "temp.csv"
+
+            res.download(path + name, name, (err) => {
+                fs.unlink(path + name, () => {})
+            })
+
+        } catch (e) {
             res.status(500).json({ message: "Что-то пошло не так", error: e.message })
         }
     }
