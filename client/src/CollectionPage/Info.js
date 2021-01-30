@@ -46,7 +46,9 @@ function Info({ info, loadCollection, fields, id, edit }) {
     }
 
     async function downloadCSV() {
-        return window.open("https://itransitkurs.herokuapp.com/api/collections/getCSV?id=" + info.id)
+        /*const dev = "http://localhost:5000/"*/
+        const product = "https://itransitkurs.herokuapp.com/"
+        window.open(product + "api/collections/getCSV?id=" + info.id + "&name=" + info.name.replace(" ", ""))
     }
 
     async function createItem(item, file) {

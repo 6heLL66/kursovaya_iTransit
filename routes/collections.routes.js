@@ -301,20 +301,27 @@ router.get(
     "/getCSV",
     async (req, res) => {
         try {
-            console.log(req.query.id)
             const items = await itemModel.find({ parent: req.query.id })
 
             const list = []
             Array.from(items).forEach((item) => {
-                list.push({...item.fields})
+                let obj = {
+                    name: item.name
+                }
+                item.fields.forEach(field => {
+                    obj[field.name] = field.value.toString()
+                })
+                obj.likes = item.likes.length
+                obj.comments = item.comments.length
+                list.push(obj)
             })
 
             const csv = new ObjectsToCsv(list)
 
-            await csv.toDisk('./tempCSV/temp.csv', { append: true })
-
             const path = "./tempCSV/"
-            const name = "temp.csv"
+            const name = req.query.name + ".csv"
+
+            await csv.toDisk(path + name, { allColumns: true, bom: true })
 
             res.download(path + name, name, (err) => {
                 fs.unlink(path + name, () => {})
