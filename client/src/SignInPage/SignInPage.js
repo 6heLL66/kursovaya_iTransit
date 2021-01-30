@@ -16,7 +16,7 @@ export default function SignInPage() {
 
     useEffect(() => {
         window.VK.Widgets.Auth('vk_auth', {
-            onAuth: (user) => login("vk", user)
+            onAuth: (user) => login("vk", user, lang, theme)
         })
     }, [])
 
