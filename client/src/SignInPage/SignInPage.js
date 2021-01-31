@@ -41,10 +41,13 @@ export default function SignInPage() {
     }, [theme, lang])
 
     useEffect(() => {
+        Array.from(document.getElementById("vk_auth").childNodes).forEach(child => {
+            child.remove()
+        })
         window.VK.Widgets.Auth('vk_auth', {
             onAuth: (user) => login("vk", user)
         })
-    }, [])
+    }, [login])
 
 
     return (
