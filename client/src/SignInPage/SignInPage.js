@@ -18,7 +18,7 @@ export default function SignInPage() {
         window.VK.Widgets.Auth('vk_auth', {
             onAuth: (user) => login("vk", user, lang, theme)
         })
-    }, [])
+    }, [lang, theme])
 
     async function login(type, user, lang, theme) {
         try {
