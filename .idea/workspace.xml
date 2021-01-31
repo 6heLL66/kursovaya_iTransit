@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34dfad1d-17f6-43b8-9e31-d0ce85df3cc7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/HomePage/LastItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/HomePage/LastItems.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +259,8 @@
       <workItem from="1611931731431" duration="3936000" />
       <workItem from="1612021411269" duration="9646000" />
       <workItem from="1612060600067" duration="2930000" />
-      <workItem from="1612084367845" duration="975000" />
+      <workItem from="1612084367845" duration="1014000" />
+      <workItem from="1612087585391" duration="249000" />
     </task>
     <servers />
   </component>
