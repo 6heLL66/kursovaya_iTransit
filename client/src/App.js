@@ -19,12 +19,11 @@ function App() {
     const theme = useSelector(state => state.theme)
     const dispatch = useDispatch()
 
+    dispatch({ type: "SET_THEME", payload: localStorage.getItem("theme") || "light" })
+    dispatch({ type: "SET_LANGUAGE", payload: localStorage.getItem("language") || "rus" })
+
     useEffect(() => {
         if (token) auth(token, dispatch).then()
-        else {
-            dispatch({ type: "SET_THEME", payload: localStorage.getItem("theme") || "light" })
-            dispatch({ type: "SET_LANGUAGE", payload: localStorage.getItem("language") || "rus" })
-        }
 
         document.body.setAttribute("class", "bg-" + theme)
     }, [token, dispatch, theme])

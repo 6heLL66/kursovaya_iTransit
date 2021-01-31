@@ -4,7 +4,8 @@
     <list default="true" id="34dfad1d-17f6-43b8-9e31-d0ce85df3cc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/SignInPage/SignInPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/SignInPage/SignInPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +260,9 @@
       <workItem from="1612021411269" duration="9646000" />
       <workItem from="1612060600067" duration="2930000" />
       <workItem from="1612084367845" duration="1014000" />
-      <workItem from="1612087585391" duration="1914000" />
+      <workItem from="1612087585391" duration="2513000" />
+      <workItem from="1612110909033" duration="518000" />
+      <workItem from="1612118469148" duration="1437000" />
     </task>
     <servers />
   </component>
