@@ -14,12 +14,6 @@ export default function SignInPage() {
     const lang = useSelector(state => state.language)
     const theme = useSelector(state => state.theme)
 
-    useEffect(() => {
-        window.VK.Widgets.Auth('vk_auth', {
-            onAuth: (user) => login("vk", user)
-        })
-    }, [])
-
     const login = useCallback(async (type, user) => {
         try {
             const data = await request(
@@ -45,6 +39,14 @@ export default function SignInPage() {
             console.log(e.message)
         }
     }, [theme, lang])
+
+    useEffect(() => {
+        window.VK.Widgets.Auth('vk_auth', {
+            onAuth: (user) => login("vk", user)
+        })
+    }, [login])
+
+
     return (
         <Container className={"mt-4 py-5" + " bg-" + (theme === "dark" ? "semi-dark" : "white")
         + " text-" + (theme === "dark" ? "white-50" : "dark")}>
