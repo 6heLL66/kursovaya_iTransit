@@ -44,7 +44,7 @@ export default function SignInPage() {
         window.VK.Widgets.Auth('vk_auth', {
             onAuth: (user) => login("vk", user)
         })
-    }, [login])
+    }, [])
 
 
     return (
