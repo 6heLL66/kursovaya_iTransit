@@ -20,9 +20,10 @@ function Header({ isLogged }) {
                 console.log(res)
             })
         }
-        window.location = "/signIn"
-        localStorage.clear()
+        localStorage.removeItem('token')
+        localStorage.removeItem('type')
         dispatch({ type: "LOGOUT_USER" })
+        window.location = "/signIn"
     }
     function search() {
         window.location = "/search/" + text
