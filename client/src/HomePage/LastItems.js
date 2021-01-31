@@ -14,7 +14,7 @@ function LastItems() {
             "GET"
         )
         if (data && data.ok) {
-            setItems(data.items.slice(data.items.length - 7 > 0 && data.items.length - 7).reverse())
+            setItems(data.items.slice(data.items.length - 8 > 0 && data.items.length - 8).reverse())
         }
     }, [request])
 

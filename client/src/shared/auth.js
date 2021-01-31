@@ -16,6 +16,8 @@ export default async function auth(token, dispatch) {
             dispatch({ type: "AUTH_USER", payload: { id: data.user._id, role: data.user.role } })
             dispatch({ type: "SET_THEME", payload: data.user.theme })
             dispatch({ type: "SET_LANGUAGE", payload: data.user.language })
+            localStorage.setItem("theme", data.user.theme)
+            localStorage.setItem("language", data.user.language)
             return data
         } else {
             dispatch({type: "LOGOUT_USER"})
