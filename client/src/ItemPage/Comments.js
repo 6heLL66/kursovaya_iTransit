@@ -3,6 +3,7 @@ import {useSelector} from "react-redux";
 import {useRequest} from "../hooks/useRequest.hook";
 import {Container, Row, Form, Col, Button} from "react-bootstrap";
 import Comment from "./Comment";
+import * as Icon from "react-bootstrap-icons"
 const languages = require("../languages.json")
 
 function Comments({ itemID }) {
@@ -84,7 +85,11 @@ function Comments({ itemID }) {
                                 />
                             </Col>
                             <Col xs={3} md={1} className={"justify-content-center mt-3"}>
-                                <Button variant={"primary"} className={"my-auto"} onClick={send}>{languages[lang].send}</Button>
+                                <Button
+                                    variant={"outline-primary"}
+                                    className={"my-auto"}
+                                    onClick={send}
+                                ><Icon.BoxArrowUp className={"send"} /></Button>
                             </Col>
                         </Row>
                     </Container> : []

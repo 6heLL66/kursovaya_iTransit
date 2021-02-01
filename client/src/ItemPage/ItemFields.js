@@ -44,12 +44,12 @@ function ItemFields({ item, loadItem }) {
     }
 
     return (
-        <Container className={"mt-4 px-5 py-3 bg-" + (theme === "dark" ? "semi-dark" : "white")
+        <Container className={"mt-4 px-4 py-3 bg-" + (theme === "dark" ? "semi-dark" : "white")
         + " text-" + (theme === "dark" ? "white-50" : "dark")}>
             <Row>
                 <Col xs={10}>
                     <Row className={"mb-3"}>
-                        <h1>{languages[lang].itemInfo}: </h1>
+                        <h2>{languages[lang].itemInfo}: </h2>
                     </Row>
                     {
                         values ? values.map((e, i) => {
@@ -57,7 +57,7 @@ function ItemFields({ item, loadItem }) {
                                 if (e.type === "text") {
                                     return (
                                         <Row key={i}>
-                                            <span style={{fontSize: "28px"}} className={"mb-0"}><strong>{e.name}</strong>: </span>
+                                            <span style={{fontSize: "24px"}} className={"mb-0"}><strong>{e.name}</strong>: </span>
                                             <Form.Control
                                                 as={"textarea"}
                                                 key={i}
@@ -70,7 +70,7 @@ function ItemFields({ item, loadItem }) {
                                 else {
                                     return (
                                         <Row key={i} className={"mb-1"}>
-                                            <span style={{fontSize: "28px"}}
+                                            <span style={{fontSize: "24px"}}
                                                   className={"mb-0"}><strong>{e.name}</strong>: </span>
                                             <Form.Control
                                                 type={e.type}
@@ -85,14 +85,14 @@ function ItemFields({ item, loadItem }) {
                                 return (
                                     <Row className={"mb-3"} key={i}>
                                         <div style={{ display: "flex", "flexDirection": "row", "alignItems": "flex-end" }}>
-                                            <span style={{fontSize: "26px"}} className={"mb-0"}><strong>{e.name}</strong>: </span>
+                                            <span style={{fontSize: "24px"}} className={"mb-0"}><strong>{e.name}</strong>: </span>
                                             <span
-                                                style={{fontSize: "26px"}}
+                                                style={{fontSize: "22px"}}
                                                 className={"ml-2 mb-0"}
                                             >{
                                                 e.type !== "checkbox" ? e.value ? e.value : "empty" :
-                                                    !e.value ? <Icon.X  style={{ color: "#e22b2b", fontSize: "32px" }}/>
-                                                    : <Icon.Check2  style={{ color: "#42b32c", fontSize: "32px" }}/>
+                                                    !e.value ? <Icon.X  style={{ color: "#e22b2b", fontSize: "30px" }}/>
+                                                    : <Icon.Check2  style={{ color: "#42b32c", fontSize: "30px" }}/>
                                             }</span>
                                         </div>
                                     </Row>
