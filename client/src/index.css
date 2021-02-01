@@ -58,3 +58,10 @@ ul {
 .send:hover{
   color: white;
 }
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .space {
+    position: relative;
+    right: 40px;
+  }
+}

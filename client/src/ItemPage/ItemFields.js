@@ -47,7 +47,7 @@ function ItemFields({ item, loadItem }) {
         <Container className={"mt-4 px-4 py-3 bg-" + (theme === "dark" ? "semi-dark" : "white")
         + " text-" + (theme === "dark" ? "white-50" : "dark")}>
             <Row>
-                <Col xs={10}>
+                <Col xs={9}>
                     <Row className={"mb-3"}>
                         <h2>{languages[lang].itemInfo}: </h2>
                     </Row>
@@ -110,14 +110,17 @@ function ItemFields({ item, loadItem }) {
                                 onClick={() => setEditMode(true)}
                                 style={{ position: "absolute", top: "5px", right: "0" }}
                             >{languages[lang].edit}</Button> :
-                            [
-                                <Button variant={"outline-success"} onClick={editFields} key={0}>{languages[lang].save}</Button>,
+                            <Row className={"justify-content-end"}>
+                                <Button
+                                    variant={"outline-success mr-lg-2 mr-0 mb-lg-0 mb-2 "}
+                                    onClick={editFields} key={0}
+                                >{languages[lang].save}</Button>
                                 <Button
                                     variant={"outline-danger"}
                                     key={1}
                                     onClick={() => setEditMode(false)}
                                 >{languages[lang].cancel}</Button>
-                            ] : []
+                            </Row> : []
                     }
 
                 </Col>

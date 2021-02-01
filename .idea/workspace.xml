@@ -4,7 +4,6 @@
     <list default="true" id="34dfad1d-17f6-43b8-9e31-d0ce85df3cc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ItemPage/Comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ItemPage/Comments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/ItemPage/ItemFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ItemPage/ItemFields.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
     </list>
@@ -264,7 +263,7 @@
       <workItem from="1612087585391" duration="2513000" />
       <workItem from="1612110909033" duration="518000" />
       <workItem from="1612118469148" duration="1620000" />
-      <workItem from="1612179829793" duration="885000" />
+      <workItem from="1612179829793" duration="2528000" />
     </task>
     <servers />
   </component>
