@@ -30,7 +30,7 @@ export default function SignUpPage() {
                     "Content-Type": "application/json"
                 }
             )
-            if (error === null) {
+            if (!error) {
                 setEmail("")
                 setUsername("")
                 setPassword("")

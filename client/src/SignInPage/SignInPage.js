@@ -34,6 +34,8 @@ export default function SignInPage() {
                 localStorage.setItem("userId", data.user._id)
                 localStorage.setItem("type", type)
                 await auth(data.token, dispatch)
+            } else {
+                setPassword("")
             }
         } catch (e) {
             console.log(e.message)
