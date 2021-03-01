@@ -71,9 +71,9 @@ function ItemCreateModal({ create, loading, error, show, hide, fields }) {
                                         key={i + 1}
                                         type={field.type}
                                         onChange={(e) => {
-                                            item.fields[i].value = field.type !== "checkbox"
+                                            item.fields[i].value = (field.type !== "checkbox"
                                                 ? e.target.value :
-                                                e.target.checked
+                                                e.target.checked)
                                         }}
                                     />
                                 ]
