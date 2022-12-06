@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react"
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import {StyledDropZone} from "react-drop-zone";
-import Image from "cloudinary-react/lib/components/Image";
-import Transformation from "cloudinary-react/lib/components/Transformation";
+import {Image, Transformation} from 'cloudinary-react';
 import {useSelector} from "react-redux";
 import {useRequest} from "../hooks/useRequest.hook";
 import * as Icon from "react-bootstrap-icons"

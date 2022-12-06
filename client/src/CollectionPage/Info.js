@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react"
 import {Button, Col, Container, Row, Form} from "react-bootstrap"
-import Transformation from "cloudinary-react/lib/components/Transformation"
-import Image from "cloudinary-react/lib/components/Image"
+import {Image, Transformation} from 'cloudinary-react';
 import ReactMarkdown from "react-markdown"
 import ItemCreateModal from "./ItemCreateModal";
 import {StyledDropZone} from "react-drop-zone";

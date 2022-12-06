@@ -10,34 +10,28 @@ const defaultState = {
 function reducer(state = defaultState, action) {
     switch (action.type) {
         case "AUTH_USER":
-            state.isAuthUser = true
-            state.userId = action.payload.id
-            state.role = action.payload.role
-            return state
+            return {
+                ...state,
+                isAuthUser: true,
+                userId: action.payload.id,
+                role: action.payload.role,
+            }
         case "LOGOUT_USER":
-            state.isAuthUser = false
-            state.user = null
-            return state
+            return {...state, isAuthUser: false, user: null }
         case "SELECT_USER":
-            state.selected = [...state.selected, action.payload]
-            return state
+            return { ...state, selected: [...state.selected, action.payload]}
         case "UNSELECT_USER":
-            state.selected = state.selected.filter((e) => {
+            return { ...state, selected: state.selected.filter((e) => {
                 return e !== action.payload
-            })
-            return state
+            })}
         case "SELECT_ALL":
-            state.selected = action.payload
-            return state
+            return { ...state, selected: action.payload}
         case "UNSELECT_ALL":
-            state.selected = []
-            return state
+            return  { ...state, selected: []}
         case "SET_THEME":
-            state.theme = action.payload
-            return state
+            return { ...state, theme: action.payload}
         case "SET_LANGUAGE":
-            state.language = action.payload
-            return state
+            return { ...state, language: action.payload}
         default:
             return state
     }

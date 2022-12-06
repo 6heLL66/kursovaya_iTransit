@@ -1,6 +1,5 @@
 import React from "react"
-import Image from "cloudinary-react/lib/components/Image";
-import Transformation from "cloudinary-react/lib/components/Transformation";
+import {Image, Transformation} from 'cloudinary-react';
 import {Button, Card, Col, Row} from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
 import {useSelector} from "react-redux";

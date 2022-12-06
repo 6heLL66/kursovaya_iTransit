@@ -19,7 +19,8 @@ app.use("/api/files/", require("./routes/files.routes"))
 app.use("/api/collections/", require("./routes/collections.routes"))
 app.use("/api/items/", require("./routes/items.routes"))
 
-if (process.env.NODE_ENV === "production") {
+
+if (process.env.NODE_ENV !== "development") {
     app.use('/', express.static(path.join(__dirname, 'client', 'build')))
 
     app.get('*', (req, res) => {
@@ -27,7 +28,7 @@ if (process.env.NODE_ENV === "production") {
     })
 }
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 7072
 
 db.connect()
     .then(() => {
@@ -35,7 +36,6 @@ db.connect()
     })
     .catch((err) => {
         console.log("Server Error", err)
-        process.exit(0)
     })
 
 

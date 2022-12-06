@@ -1,7 +1,6 @@
 import React from "react"
 import ReactMarkdown from 'react-markdown'
-import Image from "cloudinary-react/lib/components/Image"
-import Transformation from "cloudinary-react/lib/components/Transformation"
+import {Image, Transformation} from 'cloudinary-react';
 import {Button, Card, Col, Row} from "react-bootstrap";
 import {useSelector} from "react-redux";
 const languages = require("../languages.json")
